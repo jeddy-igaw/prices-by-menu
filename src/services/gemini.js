@@ -24,7 +24,7 @@ export const analyzeMenuAndTranslate = async (imageFile, apiKey) => {
 
     const genAI = new GoogleGenerativeAI(apiKey);
     // 최신 모델 사용 (속도와 정확성을 위해 flash 모델 권장)
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const imagePart = await fileToGenerativePart(imageFile);
 
